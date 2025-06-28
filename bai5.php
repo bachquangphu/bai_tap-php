@@ -3,14 +3,14 @@
 //  kiểu int ( số nguyên)
     $a = 1234;// hệ số thập phân
     $a = -123; // số âm
-    $a = 01234 // bát phân
+    $a = 01234; // bát phân
     $a = 0x1A; // hệ thập lục
     $a = 0b1111111111; // hệ nhị phân
 ?>
 
 <?php
 // kiểu số thực (float, double, real)
-    $float = 5,586;
+    $float = 5.586;
 ?>
 
 <?php 
@@ -39,12 +39,12 @@ $is_Male = true;
  // khai báo kèm theo giá trị của mảng
     $array = array('giá trị 1', 'giá trị 2');
  //hoặc
-    $array = array['giá trị 1', 'giá trị 2'];
+    $array = ['giá trị 1', 'giá trị 2'];
 ?>
 
 <?php
     // hiển thị mảng
-    $ten = aarray('Tài', 'Tuấn', 'Hà');
+    $ten = array('Tài', 'Tuấn', 'Hà');
     print_r($ten);
     // in các phần tử của mãng
     echo $ten[0];// Tài
@@ -58,9 +58,9 @@ $is_Male = true;
     $TenMang['key'] = 'value';
 // ví dụ 
     $arr = array('toi', 'di');
-    $arr[2] = code;
+    $arr[2] = 'code';
     // hoặc
-    $arr[] = code;// tự động thêm vào cuối mãng
+    $arr[] = 'code';// tự động thêm vào cuối mãng
 ?>
 
 <?php
