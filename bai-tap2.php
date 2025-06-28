@@ -53,7 +53,7 @@
                 echo "Giá trị không hợp lệ";
                 break;
         }
-        if(($thang == 3 || $thang == 4 || $thang == 5) && $thang <= 12 && $thang  > 0){
+        if($thang == 3 || $thang == 4 || $thang == 5){
                 echo "<br>Đây là tháng thuộc quý 2 <br>";
             }else{
                 echo "<br>Đây không phải tháng thuộc quý 2";
