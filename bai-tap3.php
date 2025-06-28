@@ -11,7 +11,7 @@
 5.  Tìm số lớn nhất trong mảng*/
 ?>
  <?php
-    $soNguyen = [10, 5, 30, 15, 8];
+    $soNguyen = [10, 5, 0, -1, 8];
     echo 'các số chẵn có trong mảng là: ';
     for ($i = 0; $i < count($soNguyen); $i++) {
         if ($soNguyen[$i] % 2 == 0) {

@@ -92,3 +92,4 @@ $is_Male = true;
     $a = 9;// biến a có kiểu là int
     $b = (string) $a;// ép kiểu sang string
     var_dump($b); // để kiểm tra xem biến đang ở kiểu dữ liệu nào
+?>

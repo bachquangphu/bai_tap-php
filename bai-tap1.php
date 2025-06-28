@@ -14,26 +14,29 @@
 4.  In ra màn hình điểm trung bình và học lực tương ứng.*/
 ?>
 <?php  
-    $diemToan = 7.5;
+    $diemToan = 9.5;
     $diemVan = 8.5;
     $diemAnh = 6.5;
     $diemTrungBinh = ($diemToan + $diemVan + $diemAnh) /3;
-    echo $diemTrungBinh . "<br/>";
-    echo "Điểm trung bình là " . $diemTrungBinh;
-    if($diemToan <= 10 && $diemVan <= 10 && $diemVan <= 10){
+    if(($diemToan <= 10 && $diemVan <= 10 && $diemVan <= 10) && ($diemToan >= 0 && $diemVan >= 0 && $diemVan >=0)){
         if ( $diemTrungBinh < 5.0 ){
+            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Yếu" ;
         }elseif($diemTrungBinh >= 5.0 && $diemTrungBinh < 7.0 ){
+            echo "Điểm trung bình là " . $diemTrungBinh;
             echo  "</br> học lực: Trung Bình" ;
         }elseif($diemTrungBinh >= 7.0 && $diemTrungBinh < 8.5 ){
+            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Khá" ;
         }elseif($diemTrungBinh >= 8.5 ){
+            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Giỏi" ;
         }
     }else{
         echo "Điểm không phù hợp vui lòng nhập lại";
 
     }
+   
 ?>
 
 
