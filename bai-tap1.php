@@ -20,18 +20,15 @@
     $diemTrungBinh = ($diemToan + $diemVan + $diemAnh) /3;
     if(($diemToan <= 10 && $diemVan <= 10 && $diemVan <= 10) && ($diemToan >= 0 && $diemVan >= 0 && $diemVan >=0)){
         if ( $diemTrungBinh < 5.0 ){
-            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Yếu" ;
         }elseif($diemTrungBinh >= 5.0 && $diemTrungBinh < 7.0 ){
-            echo "Điểm trung bình là " . $diemTrungBinh;
             echo  "</br> học lực: Trung Bình" ;
         }elseif($diemTrungBinh >= 7.0 && $diemTrungBinh < 8.5 ){
-            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Khá" ;
         }elseif($diemTrungBinh >= 8.5 ){
-            echo "Điểm trung bình là " . $diemTrungBinh;
             echo "</br> học lực: Giỏi" ;
         }
+        echo "Điểm trung bình là " . $diemTrungBinh;
     }else{
         echo "Điểm không phù hợp vui lòng nhập lại";
 
