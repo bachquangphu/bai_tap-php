@@ -14,16 +14,17 @@
     $b = 7;
     function tong($a,$b)// hàm số không có giá trị trả về
     {
-        echo $a + $b;
+        echo ($a + $b);
     }
 ?>
 <?php
     // giá trị mặc định cho biến truyền vào
     function redName($name = 'world')
     {
-        echo 'Hello ' . $name;
+        return 'Hello2'. $name;
     }
-    echo redName($name = 'world');
+    $name = redName('phu');
+     echo $name;
 ?>
 
 <?php
