@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+  color: rgba(92, 45, 45, 0.5);
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.form-upload {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.up-img {
+  height: 50px;
+  width: 200px;
+}

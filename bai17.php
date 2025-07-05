@@ -1,6 +1,6 @@
 <!-- các hàm xử lý file  -->
 <?php
-/*fopen(command,mode): dùng đeể mở file trong trong php
+/*fopen(command,mode): dùng để mở file trong trong php
  command: đường dẫn file
  mode: quyền truy cập file (tra google)*/
 $file = @fopen('data.txt', 'r'); //dùng @kểu ngặn chặn trong báo lỗi nếu trỏ sai đường dẫn file

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>bài tập 3 php</title>
+  </head>
+  <body>
+    <h1>Trang này upload ảnh</h1>
+    <form
+      class="form-upload"
+      action="quan-ly-anh.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input
+        class="in-img"
+        type="file"
+        name="input-img[]"
+        multiple
+        accept="image/*"
+      />
+      <input class="up-img" type="submit" name="upload-img" value="Upload" />
+    </form>
+  </body>
+</html>
