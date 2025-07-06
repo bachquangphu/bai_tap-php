@@ -1,1 +1,19 @@
-tôi đã ghi dòng này
+--CÁCH CÀI ĐẶT WORDPRESS TRÊN SEVER XAMPP--
+
+B1. tạo thư mục trong thư mục htdocs trong thư mục xampp.
+B2. vào trang wordpress.org download wordpress  và giải nén thư mục wordpress.
+B3. copy hết toàn bộ file và thư mục trong thư mục wordpress vào thư mục vừa tao ở B1 ( tất cả trong thư mục wordpress chứ không phải là thư mục wordpress)
+B4. mở xampp và start 2 module là Apache và MySQL và truy cập vào địa chỉ http://localhost/phpmyadmin.
+B5. chọn tag user accounts và chọn Add user account
+B6. điền đầy đủ thông tin user như user name, host name, password, retype 
+B7. tích chọn Create database with same name and grant all privileges sau đó bấm go để hoàn tất thiết lập thông tin người dùng cũng như database cho trang web
+B8. truy cập vào đường dẫn http://localhost/(tên thư mục vừa tạo ở B1)
+B9. chọn ngôn ngữ ở đây là English rồi chọn continue
+B10. chọn Let's go 
+B11. điền đầy đủ thông tin vừa thiết lập ở B6 rồi bấm submit
+B12.Bấm chọn Run the installation
+B13. thiết lập thông tin trang web bao gồm tên trang (site title),tên người dùng (Username), mật khẩu(password)và email.
+B14. bấm Install WordPress
+B15. chọn login
+B16. đăng nhập bằng Username và password vừa tạo ở B13
+và hoàn tất cài đặt WordPress trên sever XAMPP
