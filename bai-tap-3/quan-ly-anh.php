@@ -17,6 +17,9 @@ if (isset($_POST['upload-img']) && isset(($_FILES)['input-img'])) {
             $extension = pathinfo($name, PATHINFO_EXTENSION);
             if (in_array($extension, $allow)) {
                 $new_name = 'img_' . date('Ymd_His') . '_' . rand(1, 999) . '.' . $extension;
+                if (!file_exists('uploads/')) {
+                    mkdir('uploads', 0777, true);;
+                }
                 move_uploaded_file($tmp_name, 'uploads/' . $new_name);
                 $file = fopen('list-images.txt', 'a');
                 $write = fwrite($file, $new_name . PHP_EOL . 'Loại file: ' . $type . PHP_EOL .  'Dung lượng: ' . number_format($size / 1024) . "kb" . PHP_EOL . 'Thời gian tải lên: ' . date('d-m-Y H:i:s') .  PHP_EOL . '--------------------------' . PHP_EOL);
