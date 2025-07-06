@@ -18,21 +18,27 @@ if (isset($_POST['upload-img']) && isset(($_FILES)['input-img'])) {
             if (in_array($extension, $allow)) {
                 $new_name = 'img_' . date('Ymd_His') . '_' . rand(1, 999) . '.' . $extension;
                 if (!file_exists('uploads/')) {
-                    mkdir('uploads', 0777, true);;
+                    mkdir('uploads', 0777, true);
                 }
                 move_uploaded_file($tmp_name, 'uploads/' . $new_name);
                 $file = fopen('list-images.txt', 'a');
-                $write = fwrite($file, $new_name . PHP_EOL . 'Loại file: ' . $type . PHP_EOL .  'Dung lượng: ' . number_format($size / 1024) . "kb" . PHP_EOL . 'Thời gian tải lên: ' . date('d-m-Y H:i:s') .  PHP_EOL . '--------------------------' . PHP_EOL);
+                $write = fwrite($file, $new_name . PHP_EOL);
                 fclose($file);
-                echo "<img src = 'uploads/$new_name' style = 'width: 500px;'> <br>";
-                echo 'Tên ảnh: ' . $new_name . '<br>';
-                echo 'Loại ảnh: ' . $type . '<br>';
-                echo 'Dung lượng: ' . number_format($size / 1024) . 'kb <br>';
-                echo 'Thời gian tải lên: ' . date('d-m-Y H:i:s') . '<br> <br> <br> <br>';
+                // echo "<img src = 'uploads/$new_name' style = 'width: 500px;'> <br>";
+                // echo 'Tên ảnh: ' . $new_name . '<br>';
+                // echo 'Loại ảnh: ' . $type . '<br>';
+                // echo 'Dung lượng: ' . number_format($size / 1024) . 'kb <br>';
+                // echo 'Thời gian tải lên: ' . date('d-m-Y H:i:s') . '<br> <br> <br> <br>';
             } else {
                 echo $name . ' ảnh không hợp lệ vui lòng kiểm tra lại';
+                exit;
             }
         }
+    }
+    $list_img = file('list-images.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($list_img as $img) {
+        echo "<img src='uploads/$img' style='width: 500px;'><br>";
+        echo 'Tên ảnh: ' . $img . '<br>';
     }
 } else {
     echo 'có lỗi vui lòng thử lại<br>';
